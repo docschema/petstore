@@ -14,10 +14,6 @@ paths:
     $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/paths/pets/pets$:id.yml"
 components:
   schemas:
-    Url:
-      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/url.yml"
-    Uuid:
-      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/uuid.yml"
     Pagination:
       $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pagination.yml"
     Pet:

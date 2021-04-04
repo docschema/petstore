@@ -4,6 +4,7 @@ get:
   responses:
     "200":
       summary: "List all registered pets"
+      description: "List all registered pets"
       content:
         application/json:
           schema:
@@ -17,6 +18,7 @@ post:
   responses:
     "201":
       summary: "Register a new pet"
+      description: "Register a new pet"
       content:
         application/json:
           schema:

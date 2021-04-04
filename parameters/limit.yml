@@ -1,0 +1,8 @@
+name: limit
+in: query
+description: "Number of results per requests (max 100)"
+schema:
+  type: integer
+  default: 30
+  minimum: 1
+  maximum: 100

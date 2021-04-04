@@ -1,0 +1,55 @@
+"/pets":
+  get:
+    parameters:
+    # Use main or fork content references in raw mode.
+    - $ref: "http://github.com/stubleapp/petstore/parameters/parameter-0.yml"
+    - $ref: "http://github.com/stubleapp/petstore/parameters/parameter-1.yml"
+    responses:
+      "200":
+        description: "List all registered pets"
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: "http://github.com/stubleapp/petstore/schemas/pets.yml"
+                meta:
+                  $ref: "http://github.com/stubleapp/petstore/schemas/pagination.yml"
+  post:
+    responses:
+      "201":
+        description: Registered succesfully
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: "Succesfully registered"
+                data:
+                  $ref: "http://github.com/stubleapp/petstore/schemas/pet.yml"
+      "422":
+        $ref: 'http://github.com/stubleapp/petstore/responses/InvalidRequestResponse.yml'
+      "401":
+        $ref: 'http://github.com/stubleapp/petstore/responses/UnauthenticatedResponse.yml'
+      "403":
+        $ref: 'http://github.com/stubleapp/petstore/responses/UnauthorizedResponse.yml'
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Pet"
+"/pets/:id":
+  get:
+    responses:
+      "200":
+        description: "Show details about a pet"
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: "http://github.com/stubleapp/petstore/schemas/pet.yml"

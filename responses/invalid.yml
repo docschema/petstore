@@ -1,0 +1,16 @@
+description: "Invalid request"
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "The parameters sent in the request are invalid."
+        errors:
+          type: object
+          properties:
+            inputName:
+              type: array
+              items:
+                type: string

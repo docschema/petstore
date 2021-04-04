@@ -1,0 +1,14 @@
+type: object
+properties:
+  id:
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/uuid.yml"
+  name:
+    type: string
+    example: "Scooby Doo"
+  age:
+    type: integer
+    example: 3
+required:
+- id
+- name
+- age

@@ -1,0 +1,11 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: "Petstore example"
+  description: "My pestore http application programming interface"
+  license:
+    name: MIT
+servers:
+- url: https://api.pestore.com/
+paths: {}
+components: {}

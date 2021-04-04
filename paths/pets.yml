@@ -2,8 +2,7 @@
   get:
     parameters:
     # Use main or fork content references in raw mode.
-    - $ref: "http://github.com/stubleapp/petstore/parameters/parameter-0.yml"
-    - $ref: "http://github.com/stubleapp/petstore/parameters/parameter-1.yml"
+    - $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/parameters/limit.yml"
     responses:
       "200":
         description: "List all registered pets"
@@ -13,9 +12,9 @@
               type: object
               properties:
                 data:
-                  $ref: "http://github.com/stubleapp/petstore/schemas/pets.yml"
+                  $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pets.yml"
                 meta:
-                  $ref: "http://github.com/stubleapp/petstore/schemas/pagination.yml"
+                  $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pagination.yml"
   post:
     responses:
       "201":
@@ -29,18 +28,18 @@
                   type: string
                   example: "Succesfully registered"
                 data:
-                  $ref: "http://github.com/stubleapp/petstore/schemas/pet.yml"
+                  $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
       "422":
-        $ref: 'http://github.com/stubleapp/petstore/responses/InvalidRequestResponse.yml'
+        $ref: 'https://raw.githubusercontent.com/stubleapp/petstore/main/responses/invalid.yml'
       "401":
-        $ref: 'http://github.com/stubleapp/petstore/responses/UnauthenticatedResponse.yml'
+        $ref: 'https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthenticated.yml'
       "403":
-        $ref: 'http://github.com/stubleapp/petstore/responses/UnauthorizedResponse.yml'
+        $ref: 'https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthorized.yml'
     requestBody:
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/Pet"
+            $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
 "/pets/:id":
   get:
     responses:
@@ -52,4 +51,4 @@
               type: object
               properties:
                 data:
-                  $ref: "http://github.com/stubleapp/petstore/schemas/pet.yml"
+                  $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"

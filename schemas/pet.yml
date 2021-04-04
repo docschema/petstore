@@ -1,7 +1,7 @@
 type: object
 properties:
   id:
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/uuid.yml"
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/uuid.yml"
   name:
     type: string
     example: "Scooby Doo"

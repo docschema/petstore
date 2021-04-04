@@ -1,15 +1,20 @@
 type: object
 properties:
   current:
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/url.yml"
+    type: string
+    example: "https://api.example.com/"
   next:
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/url.yml"
+    type: string
+    example: "https://api.example.com/"
   prev:
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/url.yml"
+    type: string
+    example: "https://api.example.com/"
   last:
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/url.yml"
+    type: string
+    example: "https://api.example.com/"
   first:
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/url.yml"
+    type: string
+    example: "https://api.example.com/"
   total:
     type: integer
     example: 100

@@ -2,7 +2,8 @@ type: object
 properties:
   id:
     readOnly: true
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/uuid.yml"
+    type: string
+    example: "123e4567-e89b-12d3-a456-426614174000"
   name:
     type: string
     example: "Scooby Doo"

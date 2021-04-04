@@ -1,7 +1,7 @@
 type: object
 properties:
   id:
-    $ref: "https://github.com/stubleapp/petstore/raw/main/schemas/uuid.yml"
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/uuid.yml"
     readOnly: true
   name:
     type: string

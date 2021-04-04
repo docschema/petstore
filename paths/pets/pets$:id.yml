@@ -8,4 +8,4 @@ get:
             type: object
             properties:
               data:
-                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
+                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pet.yml"

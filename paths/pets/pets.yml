@@ -1,6 +1,6 @@
 get:
   parameters:
-  - $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/parameters/limit.yml"
+  - $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/parameters/limit.yml"
   responses:
     "200":
       description: "List all registered pets"
@@ -10,9 +10,9 @@ get:
             type: object
             properties:
               data:
-                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pets.yml"
+                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pets.yml"
               meta:
-                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pagination.yml"
+                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pagination.yml"
 post:
   responses:
     "201":
@@ -26,15 +26,15 @@ post:
                 type: string
                 example: "Succesfully registered"
               data:
-                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
+                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pet.yml"
     "422":
-      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/responses/invalid.yml"
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/invalid.yml"
     "401":
-      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthenticated.yml"
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/unauthenticated.yml"
     "403":
-      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthorized.yml"
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/unauthorized.yml"
   requestBody:
     content:
       application/json:
         schema:
-          $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
+          $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pet.yml"

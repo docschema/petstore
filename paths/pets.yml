@@ -1,4 +1,4 @@
-"/pets":
+/pets:
   get:
     parameters:
     # Use main or fork content references in raw mode.
@@ -30,17 +30,17 @@
                 data:
                   $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
       "422":
-        $ref: 'https://raw.githubusercontent.com/stubleapp/petstore/main/responses/invalid.yml'
+        $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/responses/invalid.yml"
       "401":
-        $ref: 'https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthenticated.yml'
+        $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthenticated.yml"
       "403":
-        $ref: 'https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthorized.yml'
+        $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/responses/unauthorized.yml"
     requestBody:
       content:
         application/json:
           schema:
             $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
-"/pets/:id":
+/pets/:id:
   get:
     responses:
       "200":

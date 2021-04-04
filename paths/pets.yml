@@ -1,7 +1,6 @@
-/pets:
+"/pets":
   get:
     parameters:
-    # Use main or fork content references in raw mode.
     - $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/parameters/limit.yml"
     responses:
       "200":
@@ -40,7 +39,7 @@
         application/json:
           schema:
             $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"
-/pets/:id:
+"/pets/:id":
   get:
     responses:
       "200":

@@ -7,5 +7,30 @@ info:
     name: MIT
 servers:
 - url: https://api.pestore.com/
-paths: {}
-components: {}
+paths:
+  "/pets":
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/paths/pets/pets.yml"
+  "/pets/:id":
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/paths/pets/pets$:id.yml"
+components:
+  schemas:
+    Url:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/url.yml"
+    Uuid:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/uuid.yml"
+    Pagination:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pagination.yml"
+    Pet:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pet.yml"
+    Pets:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pets.yml"
+  responses:
+    Invalid:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/invalid.yml"
+    Unauthorized:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/unauthorized.yml"
+    Unauthenticated:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/unauthenticated.yml"
+  parameters:
+    Limit:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/parameters/limit.yml"

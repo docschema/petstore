@@ -1,0 +1,11 @@
+get:
+  responses:
+    "200":
+      description: "Show details about a pet"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/pet.yml"

@@ -2,7 +2,7 @@ type: object
 properties:
   id:
     readOnly: true
-    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/schemas/uuid.yml"
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/uuid.yml"
   name:
     type: string
     example: "Scooby Doo"

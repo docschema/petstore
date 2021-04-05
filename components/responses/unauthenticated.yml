@@ -1,4 +1,5 @@
 description: "Unauthenticated"
+summary: "Unauthenticated"
 content:
   application/json:
     schema:

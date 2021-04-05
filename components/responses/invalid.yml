@@ -1,4 +1,5 @@
 description: "Invalid request"
+summary: "Invalid request"
 content:
   application/json:
     schema:

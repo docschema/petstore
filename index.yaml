@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: "Petstore example"
+  description: "My pestore http application programming interface"
+  license:
+    name: MIT
+servers:
+- url: https://api.pestore.com/
+paths:
+  "/pets":
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/paths/pets/pets.yaml"
+  "/pets/:id":
+    $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/paths/pets/pets$:id.yaml"
+components:
+  schemas:
+    Pagination:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pagination.yaml"
+    Pet:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pet.yaml"
+    Pets:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pets.yaml"
+  responses:
+    Invalid:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/invalid.yaml"
+    Unauthorized:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/unauthorized.yaml"
+    Unauthenticated:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/responses/unauthenticated.yaml"
+  parameters:
+    Limit:
+      $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/parameters/limit.yaml"

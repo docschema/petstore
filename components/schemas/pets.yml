@@ -1,3 +1,0 @@
-type: array
-items:
-  $ref: "https://raw.githubusercontent.com/stubleapp/petstore/main/components/schemas/pet.yml"
